@@ -1,7 +1,7 @@
 /* eslint-disable */
 exports.AngularTypeEnum = {
   extends: [ '@commitlint/config-angular-type-enum' ],
-  formatter: '/Users/tomasen/Develop/commitlint5/node_modules/@commitlint/format/lib/index.js',
+  formatter: '/home/runner/work/commitlintio/commitlintio/node_modules/@commitlint/format/lib/index.js',
   parserPreset: undefined,
   ignores: undefined,
   defaultIgnores: undefined,
@@ -24,7 +24,7 @@ exports.AngularTypeEnum = {
 };
 exports.Angular = {
   extends: [ '@commitlint/config-angular' ],
-  formatter: '/Users/tomasen/Develop/commitlint5/node_modules/@commitlint/format/lib/index.js',
+  formatter: '/home/runner/work/commitlintio/commitlintio/node_modules/@commitlint/format/lib/index.js',
   parserPreset: { parserOpts: { headerPattern: /^(\w*)(?:\((.*)\))?!?: (.*)$/ } },
   ignores: undefined,
   defaultIgnores: undefined,
@@ -61,7 +61,7 @@ exports.Angular = {
 };
 exports.Conventional = {
   extends: [ '@commitlint/config-conventional' ],
-  formatter: '/Users/tomasen/Develop/commitlint5/node_modules/@commitlint/format/lib/index.js',
+  formatter: '/home/runner/work/commitlintio/commitlintio/node_modules/@commitlint/format/lib/index.js',
   parserPreset: {
     name: 'conventional-changelog-conventionalcommits',
     path: './node_modules/conventional-changelog-conventionalcommits/index.js',
@@ -84,6 +84,7 @@ exports.Conventional = {
     'footer-leading-blank': [ 1, 'always' ],
     'footer-max-line-length': [ 2, 'always', 100 ],
     'header-max-length': [ 2, 'always', 100 ],
+    'header-trim': [ 2, 'always' ],
     'subject-case': [
       2,
       'never',
@@ -189,50 +190,12 @@ exports.Conventional = {
 };
 exports.LernaScopes = {
   extends: [ '@commitlint/config-lerna-scopes' ],
-  formatter: '/Users/tomasen/Develop/commitlint5/node_modules/@commitlint/format/lib/index.js',
+  formatter: '/home/runner/work/commitlintio/commitlintio/node_modules/@commitlint/format/lib/index.js',
   parserPreset: undefined,
   ignores: undefined,
   defaultIgnores: undefined,
   plugins: {},
   rules: { 'scope-enum': [ 2, 'always', [] ] },
-  helpUrl: 'https://github.com/conventional-changelog/commitlint/#what-is-commitlint',
-  prompt: {}
-};
-exports.Patternplate = {
-  extends: [ '@commitlint/config-patternplate' ],
-  formatter: '/Users/tomasen/Develop/commitlint5/node_modules/@commitlint/format/lib/index.js',
-  parserPreset: { parserOpts: { headerPattern: /^(\w*)(?:\((.*)\))?!?: (.*)$/ } },
-  ignores: undefined,
-  defaultIgnores: undefined,
-  plugins: {},
-  rules: {
-    'subject-exclamation-mark': [ 2, 'never' ],
-    'body-leading-blank': [ 1, 'always' ],
-    'footer-leading-blank': [ 1, 'always' ],
-    'header-max-length': [ 2, 'always', 72 ],
-    'scope-case': [ 2, 'always', 'lower-case' ],
-    'subject-case': [
-      2,
-      'never',
-      [ 'sentence-case', 'start-case', 'pascal-case', 'upper-case' ]
-    ],
-    'subject-empty': [ 2, 'never' ],
-    'subject-full-stop': [ 2, 'never', '.' ],
-    'type-case': [ 2, 'always', 'lower-case' ],
-    'type-empty': [ 2, 'never' ],
-    'type-enum': [
-      2,
-      'always',
-      [
-        'build',    'ci',
-        'docs',     'feat',
-        'fix',      'perf',
-        'refactor', 'revert',
-        'style',    'test'
-      ]
-    ],
-    'scope-enum': [ 2, 'always', [ 'system' ] ]
-  },
   helpUrl: 'https://github.com/conventional-changelog/commitlint/#what-is-commitlint',
   prompt: {}
 };
