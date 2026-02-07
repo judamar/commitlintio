@@ -9,6 +9,10 @@ function loadConfig(name, exportName) {
       .then(opts => {
         output(exportName, opts);
         resolve();
+      })
+      .catch(err => {
+        console.error(`/* Warning: Could not load ${name}: ${err.message} */`);
+        resolve();
       });
   });
 }
